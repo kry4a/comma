@@ -21,10 +21,24 @@ body {
   height: 100%;
 }
 
+.img {
+  display: block;
+
+  &--responsive {
+    width: 100%;
+    height: auto;  
+  }
+}
 
 .page {
   &__header {
    flex: 0 0 auto;
+   padding-top: 45px;
+
+   @media @mobiles {
+      padding-top: 0;
+   }
+
   }
 
   &__main {
@@ -68,9 +82,16 @@ body {
   &__item {
     font-weight: normal;
     margin-bottom: 8px;
-    
+    font-size: 19px;
+
     &:last-child {
       margin-bottom: 0;
+    }
+
+    @media @mobiles {
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 16px;
     }
   }
 }
@@ -80,7 +101,7 @@ body {
 .contacts {
   text-align: center;
   
-
+  margin-bottom: 25px;
   span {
     display: block;
   }
@@ -96,6 +117,15 @@ body {
     color:#ffffff;
     text-decoration: none;
 
+    @media @mobiles {
+      background: none;
+      border-bottom: 1px solid #FF1933;
+      padding: 15px 0;
+    }
+  }
+
+  @media @mobiles {
+    font-size: 12px;
   }
 
 }
@@ -109,14 +139,27 @@ body {
 
   &__part {
     margin: 0 45px;
-
-    &--logo {
-
+    
+    @media @mobiles {
+      margin: 45px 0;
     }
 
     &--list {
       border-left: 1px solid #ffffff;
       padding-left: 45px;
+      @media @mobiles {
+        border-left: none;
+        padding-left: 0;
+
+        border-top: 1px solid #ffffff;
+        padding-top: 45px;
+      }
     }
   }
+
+  @media @mobiles {
+    display: block;
+  }
 }
+
+
