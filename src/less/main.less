@@ -58,11 +58,19 @@ body {
     justify-content: space-between;
     align-items:center;
     padding: 50px 70px;
+
+    @media @mobiles {
+      padding: 22px;
+    }
   }
   &__title {
     color: rgba(255,255,255,.29);
     font-size: 20px;
     margin: 0;
+
+    @media @mobiles {
+      font-size: 16px;
+    }
   }
 
   &__help {
@@ -74,6 +82,11 @@ body {
     background-image: url('../img/facebook.svg');
     background-size: contain;
     background-repeat: no-repeat;
+
+    @media @mobiles {
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 
@@ -83,6 +96,7 @@ body {
   padding: 0;
   
   font-family: 'Oswald', sans-serif;
+  font-weight: 300;
 
   &__item {
     font-weight: normal;
@@ -119,7 +133,7 @@ body {
     padding: 35px 50px;
     display: inline-block;
     background-image: url('../img/phone.svg');
-    background-size: 100%;
+    background-size: 110%;
     background-repeat: no-repeat;
     background-position: center;
 
@@ -135,34 +149,54 @@ body {
 
   @media @mobiles {
     font-size: 12px;
+    margin-bottom: 15px;
   }
 
 }
 
 .parallax {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  position: relative;
 
-  align-items:center;
+  &__layers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    align-items:center;
+    height: 100%;
+
+    @media @mobiles {
+      display: block;
+      margin: 0 !important;
+    }
+  }
+
 
   height: 260px;
 
+  @media @mobiles {
+    height: auto;
+  }
+
   &__part {
-
-
-    @media @mobiles {
-      margin: 45px 0;
-    }
 
     &--logo {
       margin: 0 12px;
+      
+      @media @mobiles {
+        margin: 26px 0;
+      }
     }
+
     &--line {
       width: 1px;
-      height: 95%;
+      height: 98%;
       background-color: #ffffff;
       margin: 0 36px;
+
+      @media @mobiles {
+        display: none;
+      }
     }
 
     &--list {
@@ -172,14 +206,14 @@ body {
         padding-left: 0;
 
         border-top: 1px solid #ffffff;
-        padding-top: 45px;
+        padding-top: 30px;
+
+        margin-bottom: 58px;
       }
     }
   }
 
-  @media @mobiles {
-    display: block;
-  }
+
 }
 
 
