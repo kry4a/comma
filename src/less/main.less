@@ -14,6 +14,8 @@ body {
   color:#ffffff;
   
   font-size: 19px;
+  font-weight: 300;
+
   font-family: 'Roboto', sans-serif;
 
   display: flex;
@@ -33,12 +35,9 @@ body {
 .page {
   &__header {
    flex: 0 0 auto;
-   padding-top: 45px;
-
-   @media @mobiles {
-      padding-top: 0;
-   }
-
+     @media @mobiles {
+        padding-top: 0;
+     }
   }
 
   &__main {
@@ -58,6 +57,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items:center;
+    padding: 50px 70px;
+  }
+  &__title {
+    color: rgba(255,255,255,.29);
+    font-size: 20px;
+    margin: 0;
   }
 
   &__help {
@@ -81,7 +86,7 @@ body {
 
   &__item {
     font-weight: normal;
-    margin-bottom: 8px;
+    margin-bottom: 25px;
     font-size: 19px;
 
     &:last-child {
@@ -101,13 +106,17 @@ body {
 .contacts {
   text-align: center;
   
-  margin-bottom: 25px;
-  span {
-    display: block;
+  &__title {
+    margin: 0;
+    span {
+      display: block;
+      line-height: 1.4;
+    }
   }
 
+
   &__phone {
-    padding: 25px 50px;
+    padding: 35px 50px;
     display: inline-block;
     background-image: url('../img/phone.svg');
     background-size: 100%;
@@ -137,16 +146,27 @@ body {
 
   align-items:center;
 
+  height: 260px;
+
   &__part {
-    margin: 0 45px;
-    
+
+
     @media @mobiles {
       margin: 45px 0;
     }
 
+    &--logo {
+      margin: 0 12px;
+    }
+    &--line {
+      width: 1px;
+      height: 95%;
+      background-color: #ffffff;
+      margin: 0 36px;
+    }
+
     &--list {
-      border-left: 1px solid #ffffff;
-      padding-left: 45px;
+
       @media @mobiles {
         border-left: none;
         padding-left: 0;
